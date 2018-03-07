@@ -1,2 +1,4 @@
 #makefile
 makefile
+#exe
+*.exe
