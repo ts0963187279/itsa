@@ -17,11 +17,9 @@ int main(){
     enegry[1] = 0;
     for(int i = 1 ; i < n + 1; i++){
       for(int j = 0 ; j < 2 ; j++){
-	for(int k = 1 ; k <= 2 ; k++){
-	  if(abs(temp[i * 2 + j] - temp[i * 2 - k]) + enegry[i * 2 - k] < enegry[i * 2 + j]){
+	for(int k = 1 ; k <= 2 ; k++)
+	  if(abs(temp[i * 2 + j] - temp[i * 2 - k]) + enegry[i * 2 - k] < enegry[i * 2 + j])
 	    enegry[i * 2 + j] = abs(temp[i * 2 + j] - temp[i * 2 - k]) + enegry[i * 2 - k];
-	  }
-	}
       }
     }
     if(enegry[(n + 1) * 2 - 2] > enegry[(n + 1) * 2 - 1])
